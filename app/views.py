@@ -4,7 +4,9 @@ from app import app
 @app.route('/')
 def index():
 
+    title = 'Home - Welcome to News Highlights'
+    return render_template('index.html', title = title
 
-    return render_template('index.html')
 
-@app. route('/')
+
+@app.route('/')
