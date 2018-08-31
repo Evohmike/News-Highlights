@@ -2,7 +2,7 @@ class Config:
     '''
     General configuration parent class
     '''
-    pass
+    NEWS_TOP_HEADLINES = 'https://newsapi.org/v2/top-headlines?country=us&category=business&ap'
 
 
 
