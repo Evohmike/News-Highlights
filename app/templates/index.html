@@ -6,9 +6,17 @@
         <title> {{ title }}</title>
         {% else %}
         <title> Welcome to News Highlights </title>
+
+        <h3> source news </h3>
         {% endif %}
     </head>
     <body>
+     <!-- Popular movie section-->
+         <ul>
+            {% for source_news in Sources %}
+                <li>{{ source_news.title}}</li>
+            {% endfor %}
+        </ul>
 
     </body>
 </html>
