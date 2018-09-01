@@ -11,12 +11,10 @@
         {% endif %}
     </head>
     <body>
-     <!-- Popular movie section-->
          <ul>
-            {% for source_news in Sources %}
-                <li>{{ source_news.title}}</li>
+            {% for source_news in source_news %}
+                <li>{{ source_news.category}}</li>
             {% endfor %}
         </ul>
-
     </body>
 </html>

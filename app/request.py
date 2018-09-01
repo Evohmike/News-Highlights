@@ -8,7 +8,7 @@ Sources= news.Sources
 api_key= app.config['NEWS_API_KEY']
 
 #getting the sources base url
-base_url = app.config['SOURCES_API_BASE_URL']
+base_url = app.config['SOURCES_BASE_URL']
 
 def get_sources(category):
     '''
@@ -22,11 +22,11 @@ def get_sources(category):
 
         sources_results = None
 
-        if get_sources_response['results']:
-            sources_results_list = get_sources_response['results']
+        if get_sources_response['sources']:
+            sources_results_list = get_sources_response['sources']
             sources_results =process_results(sources_results_list)
 
-
+    return sources_results
 def process_results(source_list):
     '''
     Function that process the source results and transforms the to a list objects
@@ -42,9 +42,12 @@ def process_results(source_list):
     for source_item in source_list:
         id = source_item.get('id')
         name = source_item.get('name')
-        descreption = source_item.get('descripotion')
+        description = source_item.get('description')
         url = source_item.get('url')
         category = source_item.get('category')
+
+        source_object = Sources(id,name,description,url,category)
+        source_results.append(source_object)
 
     return source_results
 

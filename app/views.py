@@ -7,7 +7,7 @@ from .request import get_sources
 def index():
 
     #getting articles
-    source_news =get_sources('category')
+    source_news =get_sources('technology')
     print(source_news)
 
     title = 'Home-Welcome to news website'
