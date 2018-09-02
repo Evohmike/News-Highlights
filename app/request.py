@@ -27,6 +27,9 @@ def get_sources(category):
             sources_results =process_results(sources_results_list)
 
     return sources_results
+
+
+
 def process_results(source_list):
     '''
     Function that process the source results and transforms the to a list objects

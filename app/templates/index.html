@@ -1,41 +1,59 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        {% if title %}
-        <title> {{ title }}</title>
-        {% else %}
-        <title> Welcome to News Highlights </title>
 
-        <h3> general news </h3>
-        {% endif %}
-    </head>
-    <body>
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
 
 
-          <!-- general news -->
-        <h3> general news</h3>
-         <ul>
-            {% for general_news in General %}
-                <li>{{ general_news.name}}</li>
-            {% endfor %}
-        </ul>
+    <!-- Content block -->
+{% block content %}
 
-        <!-- Upcoming movie  -->
-        <h3> Upcoming Movies </h3>
-         <ul>
-            {% for upcoming_movie in upcoming %}
-                <li>{{ upcoming_movie.title}}</li>
-            {% endfor %}
-        </ul>
-        <!-- Now showing movie -->
-        <h3>Now Showing</h3>
-         <ul>
-            {% for now_showing_movie in now_showing %}
-                <li>{{ now_showing_movie.title}}</li>
-            {% endfor %}
-        </ul>
+<!-- general news -->
+<h3> General news</h3>
+<ul>
+    {{ macro.displayNews(General)}}
+</ul>
+
+<!---Business news-->
+<h3> Business news</h3>
+<ul>
+    {{ macro.displayNews(Business)}}
+</ul>
+
+<!--Entertainment news-->
+<h3> Entertainment news</h3>
+<ul>
+    {{ macro.displayNews(Entertainment)}}
+</ul>
+
+<!---sports news-->
+<h3> Sports news</h3>
+<ul>
+    {{ macro.displayNews(Sports)}}
+</ul>
+
+<!---Technology news--->
+<h3> Technology news</h3>
+<ul>
+    {{ macro.displayNews(Technology)}}
+</ul>
+
+<!--Science news-->
+<h3> Science news</h3>
+<ul>
+    {{ macro.displayNews(Science)}}
+</ul>
+
+<!---Health news--->
+<h3> Health news</h3>
+<ul>
+    {{ macro.displayNews(Health)}}
+</ul>
 
 
-    </body>
-</html>
+{% endblock%}
+
+
+
+
+
+
+
