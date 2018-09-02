@@ -11,10 +11,31 @@
         {% endif %}
     </head>
     <body>
+
+
+          <!-- general news -->
+        <h3> general news</h3>
          <ul>
             {% for general_news in General %}
                 <li>{{ general_news.name}}</li>
             {% endfor %}
         </ul>
+
+        <!-- Upcoming movie  -->
+        <h3> Upcoming Movies </h3>
+         <ul>
+            {% for upcoming_movie in upcoming %}
+                <li>{{ upcoming_movie.title}}</li>
+            {% endfor %}
+        </ul>
+        <!-- Now showing movie -->
+        <h3>Now Showing</h3>
+         <ul>
+            {% for now_showing_movie in now_showing %}
+                <li>{{ now_showing_movie.title}}</li>
+            {% endfor %}
+        </ul>
+
+
     </body>
 </html>
