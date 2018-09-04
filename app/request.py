@@ -4,6 +4,9 @@ import urllib.request, json
 api_key = None
 sources_url = None
 articles_url = None
+topheadlines_url = None
+everything_url = None
+everything_search_url = None
 
 
 def configure_request(app):
@@ -51,9 +54,10 @@ def process_results(source_list):
         description = source_item.get('description')
         url = source_item.get('url')
         category = source_item.get('category')
+        country = source_item.get('country')
 
         if url:
-            source_object = Sources(id, name, description, url, category)
+            source_object = Sources(id, name, description, url, category, country)
         source_results.append(source_object)
 
     return source_results
@@ -97,54 +101,3 @@ def process_articles(my_articles):
     return article_location_list
 
 
-def topheadlines(limit):
-    '''
-    Function that gets articles based on the source id
-    '''
-    get_topheadlines_url = topheadlines_url.format(limit, api_key)
-
-    with urllib.request.urlopen(get_topheadlines_url) as url:
-        topheadlines_data = url.read()
-        topheadlines_response = json.loads(topheadlines_data)
-
-        topheadlines_results = None
-
-        if topheadlines_response['articles']:
-            topheadlines_results = process_articles(topheadlines_response['articles'])
-
-    return topheadlines_results
-
-
-def everything(limit):
-    '''
-    Function that gets articles based on the source id
-    '''
-    get_everything_url = everything_url.format(limit, api_key)
-
-    with urllib.request.urlopen(get_everything_url) as url:
-        everything_data = url.read()
-        everything_response = json.loads(everything_data)
-
-        everything_results = None
-
-        if everything_response['articles']:
-            everything_results = process_articles(everything_response['articles'])
-
-    return everything_results
-
-
-def search_everything(limit, query):
-    '''
-    Function that looks for articles based on top headlines
-    '''
-    search_everything_url = everything_search_url.format(query, limit, api_key)
-    with urllib.request.urlopen(search_everything_url) as url:
-        search_everything_data = url.read()
-        search_everything_response = json.loads(search_everything_data)
-
-        search_everything_results = []
-
-        if search_everything_response['articles']:
-            search_everything_results = process_articles(search_everything_response['articles'])
-
-    return search_everything_results
