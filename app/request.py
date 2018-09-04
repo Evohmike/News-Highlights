@@ -99,5 +99,3 @@ def process_articles(my_articles):
             article_location_list.append(article_source_object)
 
     return article_location_list
-
-
