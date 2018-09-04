@@ -1,8 +1,8 @@
 ## Specifications
 | Behavior            | Input                         | Output                        | 
 | ------------------- | ----------------------------- | ----------------------------- |
-| Business sources | Check`BUSINESS`news  |  |
-| Entertainment sources | Click  `ENTERTAINMENT` button | |
-| Sports sources | Click  `SPORTS` button |  |
-| Top Headlines Articles | Click `Top Headlines` button |  |
-| Articles on Everything | Click  `Everything` button |  |
+| View General sources | Click on the `Read Articles`  | view more general news|
+| View Entertainment sources | Click on the `Read Articles` | Direct to more entertaiment news|
+| View Sports sources | Click on the `Read Articles` | Get more sports news |
+| View Technology sources | Click on the `Read Articles` | Redirects tpo more technology news|
+| View Health sources | Click on the `Read Articles`button | Get more health news |
