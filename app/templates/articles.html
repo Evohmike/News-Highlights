@@ -8,9 +8,9 @@
     </div>
     <div class="row">
         {% for article in news %}
-        <div class="col-md-3 articles-details">
+        <div class="col-md-6 articles-details card">
             <a href={{article.url}} target="_blank">
-                <img src={{article.urlToImage}} alt="IMAGE LOADING...">
+                <img class="thumbnail" src={{article.urlToImage}} alt="IMAGE LOADING...">
             </a>
             <div class="words">
                 <h4 class="text-bold"> {{article.title}} </h4>
