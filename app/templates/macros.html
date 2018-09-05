@@ -2,12 +2,12 @@
 
 {% for category in category %}
 
-<div class="col-md-3 single-source">
+<div class="col-md-3 single-source card">
     <div class="row">
-        <div class="col-md-4 source-name">
+        <div class=" source-name">
             <h3> {{category.name}} </h3>
         </div>
-        <div class="col-md-7 source-details">
+        <div class="source-details">
             <p> {{category.description|truncate(150)}}
                 <br>
                 <a href="/articles/{{category.id}}&40">Read Articles</a>
