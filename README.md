@@ -9,7 +9,7 @@ News-Highlights is a web application that is created to enable people with tight
  current news world wide at their own free time.
 The website has the home page, that has a list of all sources of news sorted in categories.
 A user will have to click on `Read Articles` on a specific source to view artciles on the site
-Click [here]() to see the live site
+Click [here](https://news-highlightsdb.herokuapp.com/) to see the live site
 
 ## Specifications
 | Behavior            | Input                         | Output                        | 
