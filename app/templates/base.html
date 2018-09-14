@@ -1,6 +1,10 @@
-{% extends 'bootstrap/base.html'%}
-<!-- <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}"> -->
-<!-- Navbar block  -->
-{% block navbar %}
-{% include 'navbar.html' %}
+{% extends "bootstrap/base.html" %} 
+
+{% block styles %}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.3/solar/bootstrap.min.css">
 {% endblock %}
+
+  {% include 'navbar.html' %} 
+
+  {% block content %} 
+  {% endblock %}

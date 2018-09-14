@@ -4,49 +4,52 @@
 
 <!-- Content block -->
 {% block content %}
+    <div class="container-fluid">
 
-<!-- general news -->
-<h3> General news</h3>
-<ul>
-    {{ macro.displayNews(General)}}
-</ul>
+            <!-- general news -->
+            <h3> General news</h3>
+            <div class="row">
+                {{ macro.displayNews(General)}}
+            </div>
+                
+                <hr>
+            <!---Business news-->
+            <h3> Business news</h3>
+            <div class="row">
+                {{ macro.displayNews(Business)}}                
+            </div>
 
-<!---Business news-->
-<h3> Business news</h3>
-<ul>
-    {{ macro.displayNews(Business)}}
-</ul>
+            <!--Entertainment news-->
+            <h3> Entertainment news</h3>
+            <div class="row">
+                {{ macro.displayNews(Entertainment)}}
+            </div>
+<hr>
+            <!---sports news-->
+            <h3> Sports news</h3>
+            <div class="row">
+                {{ macro.displayNews(Sports)}}
+            </div>
+<hr>
+            <!---Technology news--->
+            <h3> Technology news</h3>
+            <div class="row">
+                {{ macro.displayNews(Technology)}}
+            </div>
+<hr>            
+            <!--Science news-->
+            <h3> Science news</h3>
+            <div class="row">
+                {{ macro.displayNews(Science)}}
+            </div>
+<hr>
+            <!---Health news--->
+            <h3> Health news</h3>
+            <div class="row">
+                {{ macro.displayNews(Health)}}
+            </div>
 
-<!--Entertainment news-->
-<h3> Entertainment news</h3>
-<ul>
-    {{ macro.displayNews(Entertainment)}}
-</ul>
-
-<!---sports news-->
-<h3> Sports news</h3>
-<ul>
-    {{ macro.displayNews(Sports)}}
-</ul>
-
-<!---Technology news--->
-<h3> Technology news</h3>
-<ul>
-    {{ macro.displayNews(Technology)}}
-</ul>
-
-<!--Science news-->
-<h3> Science news</h3>
-<ul>
-    {{ macro.displayNews(Science)}}
-</ul>
-
-<!---Health news--->
-<h3> Health news</h3>
-<ul>
-    {{ macro.displayNews(Health)}}
-</ul>
-
+    </div>
 {% endblock%}
 
 
