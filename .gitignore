@@ -106,4 +106,4 @@ venv.bak/
 virtual/
 *.pyc
 instance/
-
+start.sh/
